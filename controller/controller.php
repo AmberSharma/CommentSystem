@@ -138,7 +138,6 @@ class MyClass {
 		//require_once("../View/showcomment.php");
 	}
 	
-	
 	public function findusers ()
 	{
 	

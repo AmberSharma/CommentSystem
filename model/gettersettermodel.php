@@ -133,13 +133,15 @@ class Register extends model {
     	
     		$this->db->Select ();
     		$result = $this->db->resultArray ();
+		//echo $this->db->lastQuery();
+		//echo "<br/>";
 		for($k=0;$k<count($result);$k++)
 		{
 			$value[$m]=$result[$k]['id'];
 			$m++;
 		}
-    	
-    		if($result)
+    		//print_r($value);
+    		if($result || !empty($value[$n]))
     		{
     		
 				for($j=0;$j< count($result);$j++)
@@ -181,7 +183,7 @@ class Register extends model {
     	$this->db->Select ();
     	$result = $this->db->resultArray ();
     
-    	echo $this->db->lastQuery();
+    	//echo $this->db->lastQuery();
     	//print_r($result);die;
     	return $result;
     
